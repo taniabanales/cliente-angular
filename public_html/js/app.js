@@ -39,4 +39,3 @@ aplicacion.controller('controladorPrincipal', function ($scope, $http) {
             console.log(datos);
         }
     }*/
-});
