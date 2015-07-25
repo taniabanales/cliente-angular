@@ -1,24 +1,39 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html ng-app="aplicacioncita">
     <head>
-        <title>TODO supply a title</title>
+        <title>Bobby Angular</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cargamos bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- Cargamos bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.css">
 
 
-    <!-- JS -->
-    <!--cargamos angular y jquery -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/angular.js"></script>
+        <!-- JS -->
+        <!--cargamos angular y jquery -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/angular.js"></script>
+        <script src="js/app.js"></script>
     </head>
-    <body>
- 
+    <body ng-controller="controladorPrincipal">
+        {{mensajito}}
+        <p></p>
+        <p>Escribe algo</p>
+        <input type ="text" ng-model="nombre">
+        {{nombre}}
+        
+        <h2> Manejo de eventos de botón con Angular</h2>
+        <button class = "btn btn-primary" ng-click="apuchurrame()">Apuchúrra el botón</button>
+        {{algo}}
+        
+        <h2>Conversor de temperatura</h2>
+        <input type ="text" ng-model="centigrados">
+        <button class = "btn btn-warning" ng-click="conversion()">Apriétame...</button>
+        <p>Grados Farenheit: {{farenheit}}</p>
+        <p>Grados Kelvin: {{kelvin}}</p>
+        
+        <h2>Introduce los datos del producto</h2>
+        <input type="text" placeholder="Nombre del producto:">
+        <input type="text" placeholder="Costo del producto:">
+        <input type="text" placeholder="Número de unidades:">
+        <button class="btn btn-success">Guardar producto</button>
     </body>
 </html>
