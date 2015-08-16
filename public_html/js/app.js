@@ -9,20 +9,19 @@ aplicacion.controller('controladorPrincipal', function ($scope, $http) {
     $scope.mensajito = 'Hola desde angular';
     $scope.nombre = '';
     $scope.algo = '';
-    $scope.farenheit = 0;
-    $scope.kelvin = 0;
-    $scope.centigrados = 0;
+    $scope.diacorte='';
     $scope.apuchurrame = function () {
-        $scope.algo = 'Haz apuchurrado el botón';
+        $scope.algo = 'Haz apuchurrado el botón!!';
     };
     
     $scope.guardarProducto=function(){
         //ENviamos la informacion a traves de REST
-        $http.delete('http://localhost:8080/producto/2').success(function(datos){
-            console.log(datos);
+        $http.delete('http://localhost:9000/tarjeta/'+
+                $scope.nombre+'/'+$scope.diacorte).success(function(data){
+            console.log(data);
         });
     };
-    
+
 });
 
 

@@ -14,7 +14,7 @@
         <script src="js/app.js"></script>
     </head>
     <body ng-controller="controladorPrincipal">
-        {{mensajito}}
+      <!--  {{mensajito}}
         <p></p>
         <p>Escribe algo</p>
         <input type ="text" ng-model="nombre">
@@ -23,8 +23,13 @@
         <h2> Manejo de eventos de botón con Angular</h2>
         <button class = "btn btn-primary" ng-click="apuchurrame()">Apuchúrra el botón</button>
         {{algo}}
+        -->
         
-        <h2>Conversor de temperatura</h2>
+        <input type="text" ng-model="nombre" placeholder="nombre">
+        <input type="text" ng-model="diacorte" placeholder="dia de corte">
+        <button class="btn btn-success" ng-click="guardar()">guardar</button>
+        <h2>Buscar todos </h2>
+      <!--  <h2>Conversor de temperatura</h2>
         <input type ="text" ng-model="centigrados">
         <button class = "btn btn-warning" ng-click="conversion()">Apriétame...</button>
         <p>Grados Farenheit: {{farenheit}}</p>
@@ -35,5 +40,18 @@
         <input type="text" placeholder="Costo del producto:">
         <input type="text" placeholder="Número de unidades:">
         <button class="btn btn-success">Guardar producto</button>
+      -->
+        
+        
+        
+        <table class="table table-bordered">
+            <tr class="danger">
+                <th>id tarjeta </th>
+                <th>Nombre de tarjeta</th>
+                <th>Dia de Corte </th>
+            </tr>
+        </table>
+      
+        
     </body>
 </html>
